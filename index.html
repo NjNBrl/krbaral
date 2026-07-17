@@ -1,0 +1,1669 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="लेखक खगराज बरालको परिचय र प्रकाशित कृतिहरू।" />
+
+  <title>खगराज बराल | आधिकारिक लेखक वेबसाइट</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+:root {
+      --background: #ffffff;
+      --light-background: #ffffff;
+      --dark-text: #29241f;
+      --muted-text: #746b62;
+      --accent: #8c433a;
+      --accent-dark: #69312b;
+      --border: rgba(39, 34, 29, 0.13);
+      --white: #ffffff;
+      --nav-height: 92px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      padding-top: var(--nav-height);
+      overflow-x: hidden;
+      background: var(--background);
+      color: var(--dark-text);
+      font-family: "Noto Sans Devanagari", sans-serif;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .hero {
+      position: relative;
+      min-height: calc(100vh - var(--nav-height));
+      overflow: hidden;
+      background:
+        radial-gradient(
+          circle at 78% 40%,
+          rgba(255, 255, 255, 0.95),
+          transparent 29%
+        ),
+        linear-gradient(
+          120deg,
+          #f7f4f0 0%,
+          #fdf9f2 52%,
+          #e9ddcb 100%
+        );
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: -190px;
+      left: -180px;
+      width: 440px;
+      height: 440px;
+      border: 1px solid rgba(142, 67, 57, 0.15);
+      border-radius: 50%;
+      box-shadow:
+        0 0 0 55px rgba(142, 67, 57, 0.035),
+        0 0 0 110px rgba(142, 67, 57, 0.02);
+    }
+
+    .hero::after {
+      content: "लेखक";
+      position: absolute;
+      right: -25px;
+      bottom: -55px;
+      color: rgba(39, 34, 29, 0.035);
+      font-size: clamp(8rem, 20vw, 18rem);
+      font-weight: 700;
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 900;
+      width: 100%;
+      height: var(--nav-height);
+      padding-inline: max(24px, calc((100vw - 1180px) / 2));
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(39, 34, 29, 0.12);
+      background: rgba(255, 254, 252, 0.88);
+      box-shadow: 0 10px 30px rgba(61, 45, 31, 0.07);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--accent);
+      border-radius: 50%;
+      color: var(--accent);
+      font-family: "Playfair Display", serif;
+      font-size: 1.2rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+      list-style: none;
+      color: var(--muted-text);
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .nav-links a {
+      position: relative;
+      padding: 8px 0;
+      transition: color 180ms ease;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 1px;
+      width: 100%;
+      height: 1px;
+      background: var(--accent);
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 220ms ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--dark-text);
+    }
+
+    .nav-links a:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    .hero-container {
+      position: relative;
+      z-index: 3;
+      width: min(1180px, calc(100% - 48px));
+      min-height: calc(100vh - var(--nav-height));
+      margin: 0 auto;
+      padding: 70px 0;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      align-items: center;
+      gap: 80px;
+    }
+
+    .hero-content {
+      max-width: 680px;
+      animation: revealContent 850ms ease both;
+    }
+
+    .eyebrow {
+      margin-bottom: 22px;
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      color: var(--accent);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 42px;
+      height: 1px;
+      background: var(--accent);
+    }
+
+    .hero-title {
+      max-width: 700px;
+      font-size: clamp(3.7rem, 6vw, 6.6rem);
+      font-weight: 700;
+      letter-spacing: -0.06em;
+      line-height: 1.05;
+    }
+
+    .hero-title span {
+      display: block;
+      color: var(--accent);
+    }
+
+    .hero-description {
+      max-width: 650px;
+      margin-top: 30px;
+      color: var(--muted-text);
+      font-size: 1.05rem;
+      line-height: 2;
+    }
+
+    .hero-description strong {
+      color: var(--dark-text);
+      font-weight: 600;
+    }
+
+    .quote {
+      max-width: 580px;
+      margin-top: 25px;
+      padding-left: 20px;
+      border-left: 2px solid var(--accent);
+      color: var(--dark-text);
+      font-size: 1rem;
+      font-style: italic;
+      line-height: 1.8;
+    }
+
+    .hero-actions {
+      margin-top: 38px;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .button {
+      min-height: 54px;
+      padding: 0 26px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      border-radius: 999px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      transition:
+        transform 180ms ease,
+        background 180ms ease,
+        box-shadow 180ms ease;
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+    }
+
+    .button-primary {
+      background: var(--accent);
+      color: var(--white);
+      box-shadow: 0 16px 35px rgba(142, 67, 57, 0.24);
+    }
+
+    .button-primary:hover {
+      background: var(--accent-dark);
+      box-shadow: 0 20px 42px rgba(142, 67, 57, 0.3);
+    }
+
+    .button-secondary {
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.45);
+      backdrop-filter: blur(8px);
+    }
+
+    .button-secondary:hover {
+      background: rgba(255, 255, 255, 0.8);
+    }
+
+    .author-area {
+      position: relative;
+      min-height: 580px;
+      display: grid;
+      place-items: center;
+      animation: revealImage 950ms 100ms ease both;
+    }
+
+    .author-circle {
+      position: relative;
+      width: 410px;
+      height: 410px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+    }
+
+    .author-circle::before {
+      content: "";
+      position: absolute;
+      inset: -28px;
+      border: 1px solid rgba(142, 67, 57, 0.2);
+      border-radius: 50%;
+    }
+
+    .author-circle::after {
+      content: "";
+      position: absolute;
+      inset: -62px;
+      border: 1px dashed rgba(142, 67, 57, 0.12);
+      border-radius: 50%;
+      animation: rotateRing 28s linear infinite;
+    }
+
+    .author-image-wrapper {
+      position: relative;
+      z-index: 3;
+      width: 100%;
+      height: 100%;
+      padding: 12px;
+      overflow: hidden;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.65);
+      box-shadow:
+        0 30px 65px rgba(56, 38, 25, 0.2),
+        0 0 0 12px rgba(255, 255, 255, 0.35);
+    }
+
+    .author-image-wrapper img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      transition: transform 600ms ease;
+    }
+
+    .author-image-wrapper:hover img {
+      transform: scale(1.045);
+    }
+
+    .author-glow {
+      position: absolute;
+      width: 430px;
+      height: 430px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.58);
+      filter: blur(10px);
+    }
+
+    .info-card {
+      position: absolute;
+      z-index: 5;
+      min-width: 220px;
+      padding: 17px 20px;
+      border: 1px solid rgba(255, 255, 255, 0.75);
+      border-radius: 16px;
+      background: rgba(255, 250, 242, 0.78);
+      box-shadow: 0 20px 45px rgba(53, 37, 26, 0.14);
+      backdrop-filter: blur(14px);
+    }
+
+    .info-card small {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--accent);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+    }
+
+    .info-card strong {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .card-top {
+      top: 80px;
+      right: -20px;
+      animation: floatingCard 4.5s ease-in-out infinite;
+    }
+
+    .card-bottom {
+      left: -30px;
+      bottom: 95px;
+      animation: floatingCard 4.5s 1.2s ease-in-out infinite;
+    }
+
+    .decorative-dot {
+      position: absolute;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    .dot-one {
+      top: 55px;
+      left: 50px;
+      width: 9px;
+      height: 9px;
+      opacity: 0.6;
+    }
+
+    .dot-two {
+      right: 35px;
+      bottom: 70px;
+      width: 15px;
+      height: 15px;
+      opacity: 0.22;
+    }
+
+    @keyframes revealContent {
+      from {
+        opacity: 0;
+        transform: translateY(28px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes revealImage {
+      from {
+        opacity: 0;
+        transform: translateX(45px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes rotateRing {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes floatingCard {
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    @media (max-width: 960px) {
+      .nav-links li:not(:last-child) {
+        display: none;
+      }
+
+      .hero-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding-top: 60px;
+        text-align: center;
+      }
+
+      .hero-content {
+        margin: 0 auto;
+      }
+
+      .eyebrow,
+      .hero-actions {
+        justify-content: center;
+      }
+
+      .hero-description,
+      .quote {
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .quote {
+        text-align: left;
+      }
+
+      .author-area {
+        min-height: 540px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      :root {
+        --nav-height: 76px;
+      }
+
+      .hero-container {
+        width: min(100% - 30px, 1180px);
+      }
+
+      .navbar {
+        padding-inline: 15px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero-container {
+        min-height: calc(100vh - 76px);
+        padding-top: 45px;
+      }
+
+      .hero-title {
+        font-size: clamp(3.1rem, 16vw, 4.8rem);
+      }
+
+      .hero-description {
+        font-size: 0.96rem;
+        line-height: 1.9;
+      }
+
+      .hero-actions {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .author-area {
+        min-height: 450px;
+        transform: scale(0.78);
+        margin-top: -40px;
+        margin-bottom: -35px;
+      }
+
+      .author-circle {
+        width: 390px;
+        height: 390px;
+      }
+
+      .card-top {
+        right: -50px;
+      }
+
+      .card-bottom {
+        left: -55px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+
+    img {
+      max-width: 100%;
+    }
+
+    section,
+    .hero-content {
+      scroll-margin-top: calc(var(--nav-height) + 24px);
+    }
+
+    .skip-link {
+      position: fixed;
+      top: 12px;
+      left: 12px;
+      z-index: 1000;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: var(--dark-text);
+      color: var(--white);
+      transform: translateY(-160%);
+      transition: transform 180ms ease;
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    .book-cover-frame {
+      background: linear-gradient(135deg, #f7f0e5, #f9f4ec);
+    }
+
+    .book-cover-frame img {
+      background: #e9dfd1;
+    }
+
+    .site-footer {
+      padding: 34px 24px;
+      border-top: 1px solid #e6ddd1;
+      background: #29241f;
+      color: rgba(255, 255, 255, 0.76);
+      text-align: center;
+      font-size: 0.86rem;
+    }
+
+    .site-footer strong {
+      color: #ffffff;
+    }
+
+/* =========================================
+   COMPACT BOOKS GRID
+========================================= */
+.books-section {
+  position: relative;
+  overflow: hidden;
+  padding: 110px 24px 120px;
+  background:
+    radial-gradient(circle at 92% 8%, rgba(181, 138, 74, 0.09), transparent 28%),
+    var(--light-background);
+}
+
+.books-section::before {
+  content: "कृतिहरू";
+  position: absolute;
+  top: 32px;
+  right: -24px;
+  color: rgba(41, 36, 31, 0.025);
+  font-size: clamp(7rem, 18vw, 16rem);
+  font-weight: 700;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.books-container {
+  position: relative;
+  z-index: 2;
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+.section-heading {
+  max-width: 700px;
+  margin-bottom: 48px;
+}
+
+.section-label {
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--accent);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.section-label::before {
+  content: "";
+  width: 40px;
+  height: 1px;
+  background: var(--accent);
+}
+
+.section-title {
+  color: var(--dark-text);
+  font-size: clamp(2.8rem, 6vw, 5.2rem);
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  line-height: 1.08;
+}
+
+.section-description {
+  max-width: 620px;
+  margin-top: 18px;
+  color: var(--muted-text);
+  font-size: 0.98rem;
+  line-height: 1.85;
+}
+
+/*
+  auto-fill keeps every book card compact instead of stretching one card
+  across the entire row. More <article class="book-card"> elements can be
+  added without changing the CSS.
+*/
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 260px));
+  justify-content: start;
+  gap: 28px;
+}
+
+.book-card {
+  overflow: hidden;
+  border: 1px solid #e0d5c7;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow:
+    0 18px 45px rgba(61, 45, 31, 0.08),
+    0 3px 10px rgba(61, 45, 31, 0.04);
+  transition:
+    transform 260ms ease,
+    box-shadow 260ms ease,
+    border-color 260ms ease;
+}
+
+.book-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(140, 67, 58, 0.35);
+  box-shadow:
+    0 28px 58px rgba(61, 45, 31, 0.14),
+    0 7px 18px rgba(61, 45, 31, 0.06);
+}
+
+.book-cover-link {
+  position: relative;
+  display: block;
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+  background: linear-gradient(145deg, #eee4d6, #f8f3eb);
+}
+
+.book-cover-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(22, 16, 12, 0.14), transparent 9%),
+    linear-gradient(180deg, transparent 72%, rgba(22, 16, 12, 0.09));
+  pointer-events: none;
+}
+
+.book-cover-link img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 480ms ease;
+}
+
+.book-card:hover .book-cover-link img {
+  transform: scale(1.035);
+}
+
+.book-card-body {
+  padding: 19px 18px 20px;
+}
+
+.book-title {
+  color: var(--dark-text);
+  font-size: 1.38rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.35;
+}
+
+.book-meta {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.book-genre,
+.book-release {
+  min-height: 29px;
+  padding: 5px 11px;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.book-genre {
+  background: rgba(140, 67, 58, 0.1);
+  color: var(--accent);
+}
+
+.book-release {
+  border: 1px solid #ddd2c3;
+  background: rgba(255, 253, 248, 0.8);
+  color: var(--muted-text);
+}
+
+.book-card-link {
+  display: block;
+  height: 100%;
+}
+
+.book-card-link:focus-visible {
+  outline: 3px solid rgba(140, 67, 58, 0.42);
+  outline-offset: 4px;
+  border-radius: 22px;
+}
+
+.book-card-link .book-title {
+  transition: color 180ms ease;
+}
+
+.book-card-link:hover .book-title {
+  color: var(--accent);
+}
+
+.book-link-arrow {
+  margin-left: auto;
+  color: var(--accent);
+  font-size: 1rem;
+  transition: transform 180ms ease;
+}
+
+.book-card-link:hover .book-link-arrow {
+  transform: translateX(3px);
+}
+
+@media (max-width: 600px) {
+  .books-section {
+    padding: 82px 15px 90px;
+  }
+
+  .section-heading {
+    margin-bottom: 34px;
+  }
+
+  .books-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .book-card {
+    border-radius: 17px;
+  }
+
+  .book-card-body {
+    padding: 14px 13px 15px;
+  }
+
+  .book-title {
+    font-size: 1.04rem;
+  }
+
+  .book-meta {
+    margin-top: 10px;
+    gap: 6px;
+  }
+
+  .book-genre,
+  .book-release {
+    min-height: 25px;
+    padding: 4px 8px;
+    font-size: 0.61rem;
+  }
+}
+
+@media (max-width: 390px) {
+  .books-grid {
+    grid-template-columns: 1fr;
+  }
+}
+  </style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">मुख्य सामग्रीमा जानुहोस्</a>
+
+  <header class="hero" id="home">
+    <nav class="navbar" aria-label="मुख्य नेभिगेसन">
+      <a href="#home" class="logo" aria-label="खगराज बरालको गृहपृष्ठ">
+        <span class="logo-icon" aria-hidden="true">ख</span>
+        <span>खगराज बराल (श्रमिक बराल)</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#home">गृहपृष्ठ</a></li>
+        <li><a href="#about">लेखक परिचय</a></li>
+        <li><a href="#books">कृतिहरू</a></li>
+        <li><a href="#contact">सम्पर्क</a></li>
+      </ul>
+    </nav>
+
+    <main class="hero-container" id="main-content">
+      <div class="hero-content" id="about">
+        <p class="eyebrow">लेखक परिचय</p>
+
+       ```html
+<h1 class="hero-title">
+  अनुभव, शिक्षा र साहित्यको
+  <span>अविरल सिर्जनायात्रा</span>
+</h1>
+
+<p class="hero-description">
+  <strong>डा. खगराज बराल</strong> विद्यालय शिक्षकदेखि नेपाल सरकारको विशिष्ट
+  श्रेणी तथा शिक्षा सचिवसम्मको जिम्मेवारी सम्हालिसक्नुभएका शिक्षाकर्मी,
+  प्रशासक तथा लेखक हुनुहुन्छ। शिक्षा र सामान्य प्रशासनका विविध पक्षमा
+  ख्याति कमाउनुभएका उहाँले आफ्ना अनुभव, अनुभूति र सामाजिक अवलोकनलाई
+  निरन्तर लेखनमार्फत प्रस्तुत गर्दै आउनुभएको छ।
+</p>
+
+<p class="hero-description">
+  साहित्यमा <strong>‘श्रमिक बराल’</strong> नामले परिचित उहाँका सिर्जनामा
+  शिक्षा, समाज, संस्कृति र समकालीन जीवनका यथार्थहरू अभिव्यक्त भएका छन्।
+</p>
+
+
+
+        <div class="hero-actions">
+          <a href="#books" class="button button-primary">
+            कृतिहरू हेर्नुहोस्
+            <span aria-hidden="true">→</span>
+          </a>
+
+        </div>
+      </div>
+
+      <div class="author-area" aria-label="लेखक खगराज बरालको परिचय">
+        <div class="author-glow"></div>
+
+        <span class="decorative-dot dot-one"></span>
+        <span class="decorative-dot dot-two"></span>
+
+
+<div class="info-card card-top">
+  <small>पूर्व जिम्मेवारी</small>
+  <strong>नेपाल सरकारका पूर्व शिक्षा सचिव</strong>
+</div>
+
+
+
+        <div class="author-circle">
+          <div class="author-image-wrapper">
+            <img
+              src="images/krb.png"
+              alt="लेखक खगराज बरालको तस्बिर"
+            />
+          </div>
+        </div>
+
+
+<div class="info-card card-bottom">
+  <small>लेखन क्षेत्र</small>
+  <strong>शिक्षा, प्रशासन र साहित्य</strong>
+</div>
+
+
+      </div>
+    </main>
+  </header>
+
+  <section class="books-section" id="books" aria-labelledby="books-title">
+    <div class="books-container">
+      <div class="section-heading">
+        <p class="section-label">प्रकाशित कृतिहरू</p>
+        <h2 class="section-title" id="books-title">लेखकका पुस्तकहरू</h2>
+
+      </div>
+
+      <div class="books-grid">
+<!--------------------------------------------------------------------------------->
+        <article class="book-card">
+          <!-- This card opens the local HTML detail page for the book. -->
+          <a
+            class="book-card-link"
+            href="sikaune-shaili.html"
+            aria-label="सिकाउने शैली पुस्तकको विवरण खोल्नुहोस्"
+          >
+            <div class="book-cover-link">
+              <img
+                src="images/sikaune-shaili.webp"
+                alt="खगराज बरालद्वारा लिखित सिकाउने शैली पुस्तकको आवरण"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="book-card-body">
+              <h3 class="book-title">सिकाउने शैली</h3>
+
+              <div class="book-meta" aria-label="पुस्तक विवरण">
+                <span class="book-genre">निबन्ध</span>
+                <span class="book-release">वि.सं. २०७५</span>
+                <span class="book-link-arrow" aria-hidden="true">→</span>
+              </div>
+            </div>
+          </a>
+        </article>
+<!--------------------------------------------------------------------------------->
+        <article class="book-card">
+          <!-- This card opens the local HTML detail page for the book. -->
+          <a
+            class="book-card-link"
+            href="sikai-ra-sahayog.html"
+            aria-label="सिकाइ र सहयोग पुस्तकको विवरण खोल्नुहोस्"
+          >
+            <div class="book-cover-link">
+              <img
+                src="images/sikai-ra-sahayog.webp"
+                alt="खगराज बरालद्वारा लिखित सिकाइ र सहयोग पुस्तकको आवरण"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="book-card-body">
+              <h3 class="book-title">सिकाइ र सहयोग</h3>
+
+              <div class="book-meta" aria-label="पुस्तक विवरण">
+                <span class="book-genre">निबन्ध</span>
+                <span class="book-release">वि.सं. २०७६</span>
+                <span class="book-link-arrow" aria-hidden="true">→</span>
+              </div>
+            </div>
+          </a>
+        </article>
+<!--------------------------------------------------------------------------------->
+
+        <article class="book-card">
+          <!-- This card opens the local HTML detail page for the book. -->
+          <a
+            class="book-card-link"
+            href="syani.html"
+            aria-label="स्यानी पुस्तकको विवरण खोल्नुहोस्"
+          >
+            <div class="book-cover-link">
+              <img
+                src="images/syani.png"
+                alt="खगराज बरालद्वारा लिखित स्यानी पुस्तकको आवरण"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="book-card-body">
+              <h3 class="book-title">स्यानी</h3>
+
+              <div class="book-meta" aria-label="पुस्तक विवरण">
+                <span class="book-genre">उपन्यास</span>
+                <span class="book-release">वि.सं. २०७७</span>
+                <span class="book-link-arrow" aria-hidden="true">→</span>
+              </div>
+            </div>
+          </a>
+        </article>
+<!--------------------------------------------------------------------------------->
+        <article class="book-card">
+          <!-- This card opens the local HTML detail page for the book. -->
+          <a
+            class="book-card-link"
+            href="maala.html"
+            aria-label="मालामा नउनिएका फूलहरू पुस्तकको विवरण खोल्नुहोस्"
+          >
+            <div class="book-cover-link">
+              <img
+                src="images/maala.png"
+                alt="खगराज बरालद्वारा लिखित मालामा नउनिएका फूलहरू पुस्तकको आवरण"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="book-card-body">
+              <h3 class="book-title">मालामा नउनिएका फूलहरू</h3>
+
+              <div class="book-meta" aria-label="पुस्तक विवरण">
+                <span class="book-genre">निबन्ध</span>
+                <span class="book-release">वि.सं. २०७८</span>
+                <span class="book-link-arrow" aria-hidden="true">→</span>
+              </div>
+            </div>
+          </a>
+        </article>
+<!--------------------------------------------------------------------------------->
+                <article class="book-card">
+          <!-- This card opens the local HTML detail page for the book. -->
+          <a
+            class="book-card-link"
+            href="pratirup.html"
+            aria-label="प्रतिरूप पुस्तकको विवरण खोल्नुहोस्"
+          >
+            <div class="book-cover-link">
+              <img
+                src="images/pratirup.webp"
+                alt="खगराज बरालद्वारा लिखित प्रतिरूप पुस्तकको आवरण"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="book-card-body">
+              <h3 class="book-title">प्रतिरूप</h3>
+
+              <div class="book-meta" aria-label="पुस्तक विवरण">
+                <span class="book-genre">उपन्यास</span>
+                <span class="book-release">वि.सं. २०८१</span>
+                <span class="book-link-arrow" aria-hidden="true">→</span>
+              </div>
+            </div>
+          </a>
+        </article>
+<!--------------------------------------------------------------------------------->
+                <article class="book-card">
+          <!-- This card opens the local HTML detail page for the book. -->
+          <a
+            class="book-card-link"
+            href="aagani-ko-ful.html"
+            aria-label="आँगनीको फूल पुस्तकको विवरण खोल्नुहोस्"
+          >
+            <div class="book-cover-link">
+              <img
+                src="images/aagani.png"
+                alt="खगराज बरालद्वारा लिखित आँगनीको फूल पुस्तकको आवरण"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="book-card-body">
+              <h3 class="book-title">आँगनीको फूल</h3>
+
+              <div class="book-meta" aria-label="पुस्तक विवरण">
+                <span class="book-genre">बाल गीत</span>
+                <span class="book-release">वि.सं. २०७६</span>
+                <span class="book-link-arrow" aria-hidden="true">→</span>
+              </div>
+            </div>
+          </a>
+        </article>
+<!--------------------------------------------------------------------------------->
+        <article class="book-card">
+          <!-- This card opens the local HTML detail page for the book. -->
+          <a
+            class="book-card-link"
+            href="futkar.html"
+            aria-label="श्रमिक बरालका फुटकर रचना पुस्तकको विवरण खोल्नुहोस्"
+          >
+            <div class="book-cover-link">
+              <img
+                src="images/futkar.png"
+                alt="खगराज बरालद्वारा लिखित श्रमिक बरालका फुटकर रचना पुस्तकको आवरण"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="book-card-body">
+              <h3 class="book-title">श्रमिक बरालका फुटकर रचना</h3>
+
+              <div class="book-meta" aria-label="पुस्तक विवरण">
+                <span class="book-genre">कथा, लघुकथा र कविता</span>
+                <span class="book-release">वि.सं. २०७८</span>
+                <span class="book-link-arrow" aria-hidden="true">→</span>
+              </div>
+            </div>
+          </a>
+        </article>
+<!--------------------------------------------------------------------------------->
+        <article class="book-card">
+          <!-- This card opens the local HTML detail page for the book. -->
+          <a
+            class="book-card-link"
+            href="abiral.html"
+            aria-label="अविरल गङ्गा पुस्तकको विवरण खोल्नुहोस्"
+          >
+            <div class="book-cover-link">
+              <img
+                src="images/abiral.png"
+                alt="खगराज बरालद्वारा लिखित अविरल गङ्गा पुस्तकको आवरण"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="book-card-body">
+              <h3 class="book-title">अविरल गङ्गा</h3>
+
+              <div class="book-meta" aria-label="पुस्तक विवरण">
+                <span class="book-genre">गीत सङ्ग्रह</span>
+                <span class="book-release">वि.सं. २०६७</span>
+                <span class="book-link-arrow" aria-hidden="true">→</span>
+              </div>
+            </div>
+          </a>
+        </article>
+<!--------------------------------------------------------------------------------->
+        <article class="book-card">
+          <!-- This card opens the local HTML detail page for the book. -->
+          <a
+            class="book-card-link"
+            href="maun-aakash.html"
+            aria-label="मौन आकाश पुस्तकको विवरण खोल्नुहोस्"
+          >
+            <div class="book-cover-link">
+              <img
+                src="images/maun-aakash.png"
+                alt="खगराज बरालद्वारा लिखित मौन आकाश पुस्तकको आवरण"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="book-card-body">
+              <h3 class="book-title">मौन आकाश</h3>
+
+              <div class="book-meta" aria-label="पुस्तक विवरण">
+                <span class="book-genre">गीत सङ्ग्रह</span>
+                <span class="book-release">वि.सं. २०७१</span>
+                <span class="book-link-arrow" aria-hidden="true">→</span>
+              </div>
+            </div>
+          </a>
+        </article>
+<!--------------------------------------------------------------------------------->
+        <article class="book-card">
+          <!-- This card opens the local HTML detail page for the book. -->
+          <a
+            class="book-card-link"
+            href="maale-goru.html"
+            aria-label="माले गोरु हरायो पुस्तकको विवरण खोल्नुहोस्"
+          >
+            <div class="book-cover-link">
+              <img
+                src="images/maale-goru.png"
+                alt="खगराज बरालद्वारा लिखित माले गोरु हरायो पुस्तकको आवरण"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="book-card-body">
+              <h3 class="book-title">माले गोरु हरायो</h3>
+
+              <div class="book-meta" aria-label="पुस्तक विवरण">
+                <span class="book-genre">बाल कविता</span>
+                <span class="book-release">वि.सं. २०८२</span>
+                <span class="book-link-arrow" aria-hidden="true">→</span>
+              </div>
+            </div>
+          </a>
+        </article>
+<!--------------------------------------------------------------------------------->
+        <article class="book-card">
+          <!-- This card opens the local HTML detail page for the book. -->
+          <a
+            class="book-card-link"
+            href="sani-ko.html"
+            aria-label="सानीको बर्थडे पुस्तकको विवरण खोल्नुहोस्"
+          >
+            <div class="book-cover-link">
+              <img
+                src="images/sani-ko.png"
+                alt="खगराज बरालद्वारा लिखित सानीको बर्थडे पुस्तकको आवरण"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="book-card-body">
+              <h3 class="book-title">सानीको बर्थडे</h3>
+
+              <div class="book-meta" aria-label="पुस्तक विवरण">
+                <span class="book-genre">बाल कथा सङ्ग्रह</span>
+                <span class="book-release">वि.सं. २०७५</span>
+                <span class="book-link-arrow" aria-hidden="true">→</span>
+              </div>
+            </div>
+          </a>
+        </article>
+<!--------------------------------------------------------------------------------->
+<article class="book-card">
+          <!-- This card opens the local HTML detail page for the book. -->
+          <a
+            class="book-card-link"
+            href="nyauli.html"
+            aria-label="न्याउली पुस्तकको विवरण खोल्नुहोस्"
+          >
+            <div class="book-cover-link">
+              <img
+                src="images/nyauli.png"
+                alt="खगराज बरालद्वारा लिखित न्याउली पुस्तकको आवरण"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="book-card-body">
+              <h3 class="book-title">न्याउली</h3>
+
+              <div class="book-meta" aria-label="पुस्तक विवरण">
+                <span class="book-genre">कथा</span>
+                <span class="book-release">वि.सं. २०८२</span>
+                <span class="book-link-arrow" aria-hidden="true">→</span>
+              </div>
+            </div>
+          </a>
+        </article>
+<!--------------------------------------------------------------------------------->
+<article class="book-card">
+          <!-- This card opens the local HTML detail page for the book. -->
+          <a
+            class="book-card-link"
+            href="shramik-baral-ka-geet.html"
+            aria-label="श्रमिक बरालका गीतहरू पुस्तकको विवरण खोल्नुहोस्"
+          >
+            <div class="book-cover-link">
+              <img
+                src="images/shramik-baral-ka-geetharu.png"
+                alt="खगराज बरालद्वारा लिखित श्रमिक बरालका गीतहरू पुस्तकको आवरण"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="book-card-body">
+              <h3 class="book-title">श्रमिक बरालका गीतहरू</h3>
+
+              <div class="book-meta" aria-label="पुस्तक विवरण">
+                <span class="book-genre">गीत</span>
+                <span class="book-release">वि.सं. २०७३</span>
+                <span class="book-link-arrow" aria-hidden="true">→</span>
+              </div>
+            </div>
+          </a>
+        </article>
+<!--------------------------------------------------------------------------------->
+<article class="book-card">
+          <!-- This card opens the local HTML detail page for the book. -->
+          <a
+            class="book-card-link"
+            href="ma-ta-sadhai-eklai.html"
+            aria-label="म त सधैँ एक्लै परेँ पुस्तकको विवरण खोल्नुहोस्"
+          >
+            <div class="book-cover-link">
+              <img
+                src="images/eklai.png"
+                alt="खगराज बरालद्वारा लिखित म त सधैँ एक्लै परेँ पुस्तकको आवरण"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="book-card-body">
+              <h3 class="book-title">म त सधैँ एक्लै परेँ</h3>
+
+              <div class="book-meta" aria-label="पुस्तक विवरण">
+                <span class="book-genre">गीत</span>
+                <span class="book-release">वि.सं. २०६२</span>
+                <span class="book-link-arrow" aria-hidden="true">→</span>
+              </div>
+            </div>
+          </a>
+        </article>
+<!--------------------------------------------------------------------------------->
+<article class="book-card">
+          <!-- This card opens the local HTML detail page for the book. -->
+          <a
+            class="book-card-link"
+            href="darshan.html"
+            aria-label="दर्शन, शिक्षा र आचरण पुस्तकको विवरण खोल्नुहोस्"
+          >
+            <div class="book-cover-link">
+              <img
+                src="images/darshan.png"
+                alt="खगराज बरालद्वारा लिखित दर्शन, शिक्षा र आचरण पुस्तकको आवरण"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="book-card-body">
+              <h3 class="book-title">दर्शन, शिक्षा र आचरण</h3>
+
+              <div class="book-meta" aria-label="पुस्तक विवरण">
+                <span class="book-genre">अनुसन्धानमूलक लेख</span>
+                <span class="book-release">वि.सं. २०७८</span>
+                <span class="book-link-arrow" aria-hidden="true">→</span>
+              </div>
+            </div>
+          </a>
+        </article>
+<!--------------------------------------------------------------------------------->
+<article class="book-card">
+          <!-- This card opens the local HTML detail page for the book. -->
+          <a
+            class="book-card-link"
+            href="chintan.html"
+            aria-label="शिक्षा चिन्तन पुस्तकको विवरण खोल्नुहोस्"
+          >
+            <div class="book-cover-link">
+              <img
+                src="images/chintan.png"
+                alt="खगराज बरालद्वारा लिखित शिक्षा चिन्तन पुस्तकको आवरण"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="book-card-body">
+              <h3 class="book-title">शिक्षा चिन्तन</h3>
+
+              <div class="book-meta" aria-label="पुस्तक विवरण">
+                <span class="book-genre">अनुसन्धानमूलक लेख</span>
+                <span class="book-release">वि.सं. २०८१</span>
+                <span class="book-link-arrow" aria-hidden="true">→</span>
+              </div>
+            </div>
+          </a>
+        </article>
+<!--------------------------------------------------------------------------------->
+<article class="book-card">
+          <!-- This card opens the local HTML detail page for the book. -->
+          <a
+            class="book-card-link"
+            href="school-edu.html"
+            aria-label="विद्यालय शिक्षा र शिक्षक व्यवस्थापन पुस्तकको विवरण खोल्नुहोस्"
+          >
+            <div class="book-cover-link">
+              <img
+                src="images/school-edu.png"
+                alt="खगराज बरालद्वारा लिखित विद्यालय शिक्षा र शिक्षक व्यवस्थापन पुस्तकको आवरण"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="book-card-body">
+              <h3 class="book-title">विद्यालय शिक्षा र शिक्षक व्यवस्थापन</h3>
+
+              <div class="book-meta" aria-label="पुस्तक विवरण">
+                <span class="book-genre">अनुसन्धानमूलक लेख</span>
+                <span class="book-release">वि.सं. २०७९</span>
+                <span class="book-link-arrow" aria-hidden="true">→</span>
+              </div>
+            </div>
+          </a>
+        </article>
+<!--------------------------------------------------------------------------------->
+<article class="book-card">
+          <!-- This card opens the local HTML detail page for the book. -->
+          <a
+            class="book-card-link"
+            href="niti.html"
+            aria-label="शिक्षाको दर्शन, नीति र व्यवहार पुस्तकको विवरण खोल्नुहोस्"
+          >
+            <div class="book-cover-link">
+              <img
+                src="images/niti.png"
+                alt="खगराज बरालद्वारा लिखित शिक्षाको दर्शन, नीति र व्यवहार पुस्तकको आवरण"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="book-card-body">
+              <h3 class="book-title">शिक्षाको दर्शन, नीति र व्यवहार</h3>
+
+              <div class="book-meta" aria-label="पुस्तक विवरण">
+                <span class="book-genre">अनुसन्धानमूलक लेख</span>
+                <span class="book-release">वि.सं. २०७५</span>
+                <span class="book-link-arrow" aria-hidden="true">→</span>
+              </div>
+            </div>
+          </a>
+        </article>
+<!--------------------------------------------------------------------------------->
+<article class="book-card">
+          <!-- This card opens the local HTML detail page for the book. -->
+          <a
+            class="book-card-link"
+            href="vimarsha.html"
+            aria-label="शैक्षिक विमर्शपुस्तकको विवरण खोल्नुहोस्"
+          >
+            <div class="book-cover-link">
+              <img
+                src="images/vimarsha.png"
+                alt="खगराज बरालद्वारा लिखित शैक्षिक विमर्श पुस्तकको आवरण"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="book-card-body">
+              <h3 class="book-title">शैक्षिक विमर्श</h3>
+
+              <div class="book-meta" aria-label="पुस्तक विवरण">
+                <span class="book-genre">अनुसन्धानमूलक लेख</span>
+                <span class="book-release">२०१३ सन्</span>
+                <span class="book-link-arrow" aria-hidden="true">→</span>
+              </div>
+            </div>
+          </a>
+        </article>
+<!--------------------------------------------------------------------------------->
+<article class="book-card">
+          <!-- This card opens the local HTML detail page for the book. -->
+          <a
+            class="book-card-link"
+            href="vyawasthapan.html"
+            aria-label="शिक्षा व्यवस्थापनका नवीन आयाम पुस्तकको विवरण खोल्नुहोस्"
+          >
+            <div class="book-cover-link">
+              <img
+                src="images/vyawasthapan.png"
+                alt="खगराज बरालद्वारा लिखित शिक्षा व्यवस्थापनका नवीन आयाम पुस्तकको आवरण"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="book-card-body">
+              <h3 class="book-title">शिक्षा व्यवस्थापनका नवीन आयाम</h3>
+
+              <div class="book-meta" aria-label="पुस्तक विवरण">
+                <span class="book-genre">अनुसन्धानमूलक लेख</span>
+                <span class="book-release">वि.सं. २०६७</span>
+                <span class="book-link-arrow" aria-hidden="true">→</span>
+              </div>
+            </div>
+          </a>
+        </article>
+<!--------------------------------------------------------------------------------->
+<article class="book-card">
+          <!-- This card opens the local HTML detail page for the book. -->
+          <a
+            class="book-card-link"
+            href="sikshya-ra-sikai.html"
+            aria-label="शिक्षा र सिकाइ : सन्दर्भ विदेशको प्रसङ्ग नेपालको पुस्तकको विवरण खोल्नुहोस्"
+          >
+            <div class="book-cover-link">
+              <img
+                src="images/sikshya-ra-sikai.png"
+                alt="खगराज बरालद्वारा लिखित शिक्षा र सिकाइ : सन्दर्भ विदेशको प्रसङ्ग नेपालको पुस्तकको आवरण"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="book-card-body">
+              <h3 class="book-title">शिक्षा र सिकाइ : सन्दर्भ विदेशको प्रसङ्ग नेपालको </h3>
+
+              <div class="book-meta" aria-label="पुस्तक विवरण">
+                <span class="book-genre">अनुसन्धानमूलक लेख</span>
+                <span class="book-release">वि.सं. २०७४</span>
+                <span class="book-link-arrow" aria-hidden="true">→</span>
+              </div>
+            </div>
+          </a>
+        </article>
+<!--------------------------------------------------------------------------------->
+<article class="book-card">
+          <!-- This card opens the local HTML detail page for the book. -->
+          <a
+            class="book-card-link"
+            href="mudda.html"
+            aria-label="केही शैक्षिक मुद्दाहरू पुस्तकको विवरण खोल्नुहोस्"
+          >
+            <div class="book-cover-link">
+              <img
+                src="images/mudda.png"
+                alt="खगराज बरालद्वारा लिखित केही शैक्षिक मुद्दाहरू पुस्तकको आवरण"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="book-card-body">
+              <h3 class="book-title">केही शैक्षिक मुद्दाहरू</h3>
+
+              <div class="book-meta" aria-label="पुस्तक विवरण">
+                <span class="book-genre">अनुसन्धानमूलक लेख</span>
+                <span class="book-release">वि.सं. २०६८</span>
+                <span class="book-link-arrow" aria-hidden="true">→</span>
+              </div>
+            </div>
+          </a>
+        </article>
+<!--------------------------------------------------------------------------------->
+<article class="book-card">
+          <!-- This card opens the local HTML detail page for the book. -->
+          <a
+            class="book-card-link"
+            href="prabandha.html"
+            aria-label="केही शैक्षिक प्रबन्ध पुस्तकको विवरण खोल्नुहोस्"
+          >
+            <div class="book-cover-link">
+              <img
+                src="images/prabandha.png"
+                alt="खगराज बरालद्वारा लिखित केही शैक्षिक प्रबन्ध पुस्तकको आवरण"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="book-card-body">
+              <h3 class="book-title">केही शैक्षिक प्रबन्ध</h3>
+
+              <div class="book-meta" aria-label="पुस्तक विवरण">
+                <span class="book-genre">अनुसन्धानमूलक लेख</span>
+                <span class="book-release">वि.सं. २०७१</span>
+                <span class="book-link-arrow" aria-hidden="true">→</span>
+              </div>
+            </div>
+          </a>
+        </article>
+<!--------------------------------------------------------------------------------->
+<article class="book-card">
+          <!-- This card opens the local HTML detail page for the book. -->
+          <a
+            class="book-card-link"
+            href="dristartha.html"
+            aria-label="शैक्षिक दृष्टार्थ पुस्तकको विवरण खोल्नुहोस्"
+          >
+            <div class="book-cover-link">
+              <img
+                src="images/dristartha.png"
+                alt="खगराज बरालद्वारा लिखित शैक्षिक दृष्टार्थ पुस्तकको आवरण"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="book-card-body">
+              <h3 class="book-title">शैक्षिक दृष्टार्थ</h3>
+
+              <div class="book-meta" aria-label="पुस्तक विवरण">
+                <span class="book-genre">अनुसन्धानमूलक लेख</span>
+                <span class="book-release">वि.सं. २०७३</span>
+                <span class="book-link-arrow" aria-hidden="true">→</span>
+              </div>
+            </div>
+          </a>
+        </article>
+<!--------------------------------------------------------------------------------->
+<article class="book-card">
+          <!-- This card opens the local HTML detail page for the book. -->
+          <a
+            class="book-card-link"
+            href="vicharan.html"
+            aria-label="शैक्षिक विचरण पुस्तकको विवरण खोल्नुहोस्"
+          >
+            <div class="book-cover-link">
+              <img
+                src="images/vicharan.png"
+                alt="खगराज बरालद्वारा लिखित शैक्षिक  विचरण पुस्तकको आवरण"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="book-card-body">
+              <h3 class="book-title">शैक्षिक  विचरण</h3>
+
+              <div class="book-meta" aria-label="पुस्तक विवरण">
+                <span class="book-genre">अनुसन्धानमूलक लेख</span>
+                <span class="book-release">वि.सं. २०७०</span>
+                <span class="book-link-arrow" aria-hidden="true">→</span>
+              </div>
+            </div>
+          </a>
+        </article>
+<!--------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------->
+    
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer" id="contact">
+    <p><strong>खगराज बराल</strong> — आधिकारिक लेखक वेबसाइट</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="सिकाउने शैली — खगराज बराल"
+  />
+
+  <title>सिकाउने शैली | खगराज बराल</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --white: #ffffff;
+      --background: #f7f9fc;
+      --surface: #ffffff;
+      --text: #182230;
+      --muted: #5f6b7a;
+      --border: #dfe5ec;
+      --red: #c83f49;
+      --red-dark: #a82e38;
+      --green: #2f7d5b;
+      --green-soft: #edf8f2;
+      --blue: #2f65b9;
+      --blue-soft: #edf4ff;
+      --shadow: 0 24px 64px rgba(24, 34, 48, 0.1);
+      --nav-height: 84px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      padding-top: var(--nav-height);
+      overflow-x: hidden;
+      background: var(--background);
+      color: var(--text);
+      font-family: "Noto Sans Devanagari", sans-serif;
+      text-rendering: optimizeLegibility;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    :focus-visible {
+      outline: 3px solid rgba(47, 101, 185, 0.35);
+      outline-offset: 4px;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      width: 100%;
+      height: var(--nav-height);
+      padding-inline: max(20px, calc((100vw - 1180px) / 2));
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 8px 28px rgba(24, 34, 48, 0.06);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+
+    .navbar::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: -1px;
+      left: 0;
+      height: 3px;
+      background: linear-gradient(
+        90deg,
+        var(--red) 0 33.333%,
+        var(--green) 33.333% 66.666%,
+        var(--blue) 66.666% 100%
+      );
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    .logo-mark {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border: 2px solid var(--blue);
+      border-radius: 12px;
+      background: var(--blue-soft);
+      color: var(--blue);
+      font-size: 1.12rem;
+    }
+
+    .back-link {
+      min-height: 42px;
+      padding: 0 17px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: var(--white);
+      color: var(--muted);
+      font-size: 0.86rem;
+      font-weight: 600;
+      transition: border-color 180ms ease, color 180ms ease, background 180ms ease;
+    }
+
+    .back-link:hover {
+      border-color: rgba(47, 101, 185, 0.35);
+      background: var(--blue-soft);
+      color: var(--blue);
+    }
+
+    .page {
+      position: relative;
+      overflow: hidden;
+      padding: 72px 24px 90px;
+      background:
+        radial-gradient(circle at 88% 12%, rgba(47, 101, 185, 0.08), transparent 25%),
+        radial-gradient(circle at 8% 88%, rgba(47, 125, 91, 0.07), transparent 27%),
+        var(--background);
+    }
+
+    .page::before {
+      content: "";
+      position: absolute;
+      top: 70px;
+      left: 0;
+      width: 7px;
+      height: 220px;
+      border-radius: 0 12px 12px 0;
+      background: linear-gradient(var(--red), var(--green), var(--blue));
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      width: min(1120px, 100%);
+      margin: 0 auto;
+    }
+
+    .book-layout {
+      display: grid;
+      grid-template-columns: minmax(250px, 350px) minmax(0, 1fr);
+      align-items: start;
+      gap: clamp(48px, 7vw, 90px);
+    }
+
+    .cover-column {
+      position: sticky;
+      top: calc(var(--nav-height) + 34px);
+    }
+
+    .cover-shell {
+      position: relative;
+      padding: 32px;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .cover-shell::before,
+    .cover-shell::after {
+      content: "";
+      position: absolute;
+      border-radius: 999px;
+    }
+
+    .cover-shell::before {
+      top: 17px;
+      right: 18px;
+      width: 11px;
+      height: 11px;
+      background: var(--red);
+      box-shadow: -20px 0 0 var(--green), -40px 0 0 var(--blue);
+    }
+
+    .cover-shell::after {
+      right: 28px;
+      bottom: 24px;
+      left: 28px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--red), var(--green), var(--blue));
+    }
+
+    .book-cover {
+      width: 100%;
+      aspect-ratio: 2 / 3;
+      object-fit: cover;
+      border-radius: 7px 14px 14px 7px;
+      box-shadow:
+        -22px 28px 40px rgba(24, 34, 48, 0.2),
+        -6px 10px 16px rgba(24, 34, 48, 0.12);
+    }
+
+    .content-column {
+      padding-top: 10px;
+    }
+
+    .title-line {
+      width: 74px;
+      height: 5px;
+      margin-bottom: 22px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--red), var(--green), var(--blue));
+    }
+
+    h1 {
+      color: var(--text);
+      font-size: clamp(3.5rem, 7vw, 6.5rem);
+      font-weight: 700;
+      letter-spacing: -0.055em;
+      line-height: 1.05;
+    }
+
+    .description {
+      margin-top: 34px;
+      color: var(--muted);
+      font-size: 1.04rem;
+      line-height: 2.05;
+    }
+
+    .details-card {
+      margin-top: 42px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: var(--surface);
+      box-shadow: 0 18px 48px rgba(24, 34, 48, 0.07);
+    }
+
+    .detail-row {
+      padding: 17px 22px;
+      display: grid;
+      grid-template-columns: 145px minmax(0, 1fr);
+      gap: 18px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .detail-row:nth-child(3n + 1) {
+      border-left: 4px solid var(--red);
+    }
+
+    .detail-row:nth-child(3n + 2) {
+      border-left: 4px solid var(--green);
+    }
+
+    .detail-row:nth-child(3n) {
+      border-left: 4px solid var(--blue);
+    }
+
+    .detail-row:last-child {
+      border-bottom: 0;
+    }
+
+    .detail-row dt {
+      color: var(--muted);
+      font-size: 0.86rem;
+      font-weight: 500;
+    }
+
+    .detail-row dd {
+      color: var(--text);
+      font-size: 0.92rem;
+      font-weight: 600;
+      line-height: 1.55;
+      word-break: break-word;
+    }
+
+    .purchase-area {
+      margin-top: 38px;
+      padding-top: 32px;
+      display: flex;
+      justify-content: flex-end;
+      border-top: 1px solid var(--border);
+    }
+
+    .purchase-link {
+      min-height: 54px;
+      padding: 0 27px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 11px;
+      border-radius: 12px;
+      background: var(--red);
+      color: var(--white);
+      font-size: 0.92rem;
+      font-weight: 700;
+      box-shadow: 0 14px 30px rgba(200, 63, 73, 0.22);
+      transition: transform 180ms ease, background 180ms ease, box-shadow 180ms ease;
+    }
+
+    .purchase-link:hover {
+      background: var(--red-dark);
+      box-shadow: 0 18px 36px rgba(200, 63, 73, 0.28);
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 860px) {
+      .book-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .cover-column {
+        position: static;
+        width: min(340px, 100%);
+        margin: 0 auto;
+      }
+
+      .content-column {
+        text-align: center;
+      }
+
+      .title-line {
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .description {
+        text-align: left;
+      }
+
+      .details-card {
+        text-align: left;
+      }
+    }
+
+    @media (max-width: 600px) {
+      :root {
+        --nav-height: 74px;
+      }
+
+      .navbar {
+        padding-inline: 14px;
+      }
+
+      .logo {
+        font-size: 1rem;
+      }
+
+      .logo-mark {
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+      }
+
+      .back-link {
+        min-height: 38px;
+        padding: 0 13px;
+        font-size: 0.78rem;
+      }
+
+      .page {
+        padding: 48px 15px 70px;
+      }
+
+      .cover-shell {
+        padding: 24px;
+      }
+
+      h1 {
+        font-size: clamp(3.2rem, 18vw, 4.8rem);
+      }
+
+      .description {
+        font-size: 0.96rem;
+        line-height: 1.95;
+      }
+
+      .detail-row {
+        grid-template-columns: 105px minmax(0, 1fr);
+        padding: 15px 17px;
+      }
+
+      .purchase-area {
+        justify-content: stretch;
+      }
+
+      .purchase-link {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar" aria-label="मुख्य नेभिगेसन">
+    <a class="logo" href="index.html#home">
+      <span class="logo-mark" aria-hidden="true">ख</span>
+      <span>खगराज बराल</span>
+    </a>
+
+    <a class="back-link" href="index.html#books">
+      <span aria-hidden="true">←</span>
+      पुस्तक सूची
+    </a>
+  </nav>
+
+  <main class="page">
+    <div class="container">
+      <section class="book-layout">
+        <div class="cover-column">
+          <div class="cover-shell">
+            <img
+              class="book-cover"
+              src="images/sikaune-shaili.webp"
+              alt="सिकाउने शैली पुस्तकको आवरण"
+            />
+          </div>
+        </div>
+
+        <article class="content-column">
+          <div class="title-line" aria-hidden="true"></div>
+          <h1>सिकाउने शैली</h1>
+
+          <p class="description">
+            पूर्व शिक्षा सचिव खगराज बरालको यो पुस्तक समग्र शिक्षामा केन्द्रित छ । लेखक खगराज
+            बरालको बाल्यकालको शिक्षा अनुभव र अहिले शिक्षाकै नेतृत्व तहमा पुगेपछिको यथार्थ अवस्थाका
+            कारण पुस्तकले एकैसाथ शिक्षाको समग्र वस्तुस्थितिको जानकारी दिन्छ । पुस्तकमा ३१ वटा लेखोट
+            छन् । सबै लेखोटले नेपालका सामुदायिक विद्यालय, सरकारी क्याम्पस, विदेशी शिक्षा, नेपालको
+            निजी शिक्षा, विद्यार्थीका अनुभवहरुको बयान गर्दछ । शिक्षाको उज्यालोबाट कोही पनि बञ्चित हुनु
+            नहुने एक मात्र उद्देश्य बोकेका खगराज बराल नेपाली शैक्षिक जगतमा सुपरिचित नाम हो ।
+            विद्यालय शिक्षकदेखि नेपाल सरकारको शिक्षा सचिवसम्मको यात्रा तय गरिसकेका बराल आफैँमा
+            अनुभव र अनुभूतिको पोको भने अन्यथा नहोला । शिक्षाकर्मी बरालका अनुभवले सिँगारिएको
+            &#39;सिकाउने शैली’ ले पाठकलाई आकर्षित गर्ने मात्र होइन, शैक्षिक क्षेत्र सुधारका लागि पनि अनेक
+            सपना र सम्भावना बोकेका छन् । &#39;हाम्रो शिक्षा पद्धतिको सुधार अरूले होइन, आफैले गर्नुपर्छ&#39;,
+            बरालका समग्र अनुभव यसैमा केन्द्रित छन- विसङ्गति देखाउनुभन्दा यस विरुद्ध लाग्नु महत्वपूर्ण
+            हुन्छ ।
+          </p>
+
+          <dl class="details-card">
+            <div class="detail-row">
+              <dt>पुस्तकको नाम:</dt>
+              <dd>सिकाउने शैली</dd>
+            </div>
+            <div class="detail-row">
+              <dt>लेखक:</dt>
+              <dd>खगराज बराल</dd>
+            </div>
+            <div class="detail-row">
+              <dt>विधा:</dt>
+              <dd>निबन्ध</dd>
+            </div>
+            <div class="detail-row">
+              <dt>प्रकाशक:</dt>
+              <dd>साङ्ग्रिला बुक्स प्रा.लि.</dd>
+            </div>
+            <div class="detail-row">
+              <dt>संस्करण:</dt>
+              <dd>पहिलो (२०७५)</dd>
+            </div>
+            <div class="detail-row">
+              <dt>पृष्ठ:</dt>
+              <dd>२४१</dd>
+            </div>
+            <div class="detail-row">
+              <dt>मूल्य:</dt>
+              <dd>रु. ३९५/–</dd>
+            </div>
+            <div class="detail-row">
+              <dt>ISBN:</dt>
+              <dd>978-9937-708-58-4</dd>
+            </div>
+          </dl>
+
+          <div class="purchase-area">
+            <a class="purchase-link" href="https://booksmandala.com/books/sikaune-shaili-16165">
+              अनलाइन किन्नुहोस्
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
